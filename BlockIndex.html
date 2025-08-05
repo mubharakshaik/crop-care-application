@@ -1,0 +1,120 @@
+<!-- templates/block_index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Info & Farmer Registration</title>
+    <style>
+        body {
+            background-image: url("/static/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .form-section {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        form input[type="submit"] {
+            margin-top: 15px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>🌿 Crop Care Application</h2>
+        <div class="nav-links">
+            <a href="/crop">Crop Recommendation</a>
+            <a href="/fertilizer">Fertilizer Recommendation</a>
+            <a href="/block-index">Blockchain Info</a>
+            <a href="/">Plant Disease Detection</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Blockchain Information</h1>
+        <p>This page shows secure records stored via blockchain (placeholder).</p>
+
+        <div class="form-section">
+            <h2>🧑‍🌾 Farmer Registration Form</h2>
+            <form action="/register-farmer" method="POST">
+                <label for="name">Farmer Name:</label>
+                <input type="text" name="name" required>
+
+                <label for="farm_type">Farm Type:</label>
+                <input type="text" name="farm_type" required>
+
+                <label for="soil_type">Soil Type:</label>
+                <input type="text" name="soil_type" required>
+
+                <label for="area">Farm Area (in acres):</label>
+                <input type="text" name="area" required>
+
+                <label for="region">Region:</label>
+                <input type="text" name="region" required>
+
+                <label for="state">State:</label>
+                <input type="text" name="state" required>
+
+                <label for="district">District:</label>
+                <input type="text" name="district" required>
+
+                <input type="submit" value="Register Farmer">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

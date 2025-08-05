@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+</head>
+<body>
+  <h2>Plant Disease Detection</h2>
+  <form action="/disease-predict" method="POST" enctype="multipart/form-data">
+    <label>Upload Leaf Image:</label><input type="file" name="file"><br>
+    <button type="submit">Detect Disease</button>
+  </form>
+</body>
+</html>

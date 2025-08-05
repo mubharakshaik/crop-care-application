@@ -1,0 +1,9 @@
+Flask
+torch
+torchvision
+numpy
+pandas
+markupsafe
+requests
+web3
+eth_utils

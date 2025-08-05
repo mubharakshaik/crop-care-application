@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fertilizer Recommendation</title>
+  <style>
+    body {
+      background: url('/static/background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    h1, p, form {
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fertilizer Recommendation</h1>
+  <p>Example crop-fertilizer pairs:</p>
+  <ul>
+    <li>Rice </li>
+    <li>Wheat </li>
+    <li>Maize </li>
+    <li>Cotton </li>
+  </ul>
+
+  <form action="/fertilizer-result" method="POST">
+    <label>Enter Crop Name:</label>
+    <input type="text" name="crop" required>
+    <button type="submit">Recommend Fertilizer</button>
+  </form>
+</body>
+</html>

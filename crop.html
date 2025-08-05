@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crop Recommendation</title>
+  <style>
+    body {
+      background: url('/static/background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    h1, p, form {
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Crop Recommendation</h1>
+  <p>Available soil types:</p>
+  <ul>
+    <li>Loamy Soil </li>
+    <li>Sandy Soil </li>
+    <li>Clay Soil </li>
+    <li>Black Soil </li>
+  </ul>
+
+  <form action="/crop-result" method="POST">
+    <label>Enter Soil Type:</label>
+    <input type="text" name="soil" required>
+    <button type="submit">Recommend Crop</button>
+  </form>
+</body>
+</html>

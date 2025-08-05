@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Care Application</title>
+    <style>
+        body {
+            background-image: url("/static/background.jpeg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .navbar h2 {
+            float: left;
+            margin: 0 20px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 16px;
+            float: left;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .upload-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .quotes {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px 20px;
+            margin: 20px auto;
+            width: 70%;
+            border-radius: 12px;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🌿 Crop Care Application</h2>
+    <a href="/">Plant Disease Detection</a>
+    <a href="/crop">Crop Recommendation</a>
+    <a href="/fertilizer">Fertilizer Recommendation</a>
+    <a href="/block-index">Blockchain Info</a>
+    <a href="/register">Farmer Register</a>
+</div>
+
+<div class="container">
+    <div class="upload-box">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required><br><br>
+            <input type="submit" value="Detect Disease">
+        </form>
+    </div>
+
+    <div class="quotes">
+        🌾 "To plant a seed is to believe in tomorrow."<br>
+        🚜 "Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth." – Thomas Jefferson<br>
+        🌱 "The farmer is the only man in our economy who buys everything at retail, sells everything at wholesale, and pays the freight both ways." – John F. Kennedy
+    </div>
+</div>
+
+</body>
+</html>
